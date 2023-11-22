@@ -1,6 +1,6 @@
 package Homework.course;
 
-public class Bicycle extends Vehicle {
+public class Bicycle extends Transport {
     public Bicycle(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
