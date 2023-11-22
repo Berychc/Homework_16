@@ -1,8 +1,8 @@
 package Homework.course;
 
 public class Vehicle {
-    String modelName;
-    int wheelsCount;
+    private String modelName;
+    private int wheelsCount;
 
     public Vehicle(String modelName, int wheelsCount) {
         this.modelName = modelName;
@@ -15,5 +15,9 @@ public class Vehicle {
 
     public int getWheelsCount() {
         return wheelsCount;
+    }
+
+    public void updateTyre() {
+        System.out.println("Меняем шину " + modelName);
     }
 }
