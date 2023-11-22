@@ -2,22 +2,15 @@ package Homework.course;
 
 public class ServiceStation {
     public static void checkVehicle(Vehicle vehicle) {
-        System.out.println("Проводим осмотр " + vehicle.getModelName());
+        System.out.println("Обслуживаем " + vehicle.getModelName() + ", кол-во колес: " + vehicle.getWheelsCount());
+        vehicle.updateTyre();
 
-        if (vehicle instanceof Car) {
-            Car car = (Car) vehicle;
-            car.updateTyre();
-            car.checkEngine();
-        } else if (vehicle instanceof Truck) {
-            Truck truck = (Truck) vehicle;
-            truck.updateTyre();
-            truck.checkEngine();
-        } else if (vehicle instanceof Bicycle) {
-            Bicycle bicycle = (Bicycle) vehicle;
-            bicycle.updateTyre();
-            bicycle.checkChain();
+        if (vehicle.getClass().equals(Truck.class)) {
+            ((Truck) vehicle).checkEngine();
+        } else if (vehicle.getClass().equals(Bicycle.class)) {
+            ((Bicycle) vehicle).checkChain();
+        } else if (vehicle.getClass().equals(Car.class)) {
+            ((Car) vehicle).checkEngine();
         }
-
-        System.out.println("Осмотр " + vehicle.getModelName() + " завершен");
     }
 }

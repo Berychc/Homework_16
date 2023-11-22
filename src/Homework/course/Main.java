@@ -2,15 +2,15 @@ package Homework.course;
 
 public class Main {
     public static void main(String[] args) {
-        Vehicle car = new Car("car1", 4);
-        Vehicle truck = new Truck("truck1", 6);
-        Vehicle bicycle = new Bicycle("bicycle1", 2);
+        Vehicle truck = new Truck("truck_1", 6);
+        Vehicle bicycle = new Bicycle("bicycle_1", 2);
+        Vehicle car = new Car("car_1", 4);
 
 
-        ServiceStation.checkVehicle(car);
-        System.out.println();
         ServiceStation.checkVehicle(truck);
         System.out.println();
         ServiceStation.checkVehicle(bicycle);
+        System.out.println();
+        ServiceStation.checkVehicle(car);
     }
 }
